@@ -1,7 +1,21 @@
 import "jest-location-mock";
 import mockConsole from "jest-mock-console";
+import "@testing-library/jest-dom";
+import server from "./mockServer/server";
 
 mockConsole();
+
+beforeAll(() => {
+  server.listen();
+});
+
+afterEach(() => {
+  server.restoreHandlers();
+});
+
+afterAll(() => {
+  server.close();
+});
 
 // 手动 mock localStorage
 // Object.defineProperty(global, "localStorage", {
