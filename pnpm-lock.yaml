@@ -6,6 +6,7 @@ specifiers:
   jest: 27.5.1
   jest-environment-jsdom-global: 3.0.0
   jest-location-mock: 1.0.9
+  jest-mock-console: ^2.0.0
   prettier: ^2.7.1
   ts-jest: 27.1.4
   typescript: 4.6.3
@@ -14,10 +15,11 @@ dependencies:
   '@types/jest': registry.npmmirror.com/@types/jest/27.4.1
   '@types/node': registry.npmmirror.com/@types/node/18.7.17
   jest: registry.npmmirror.com/jest/27.5.1
-  jest-environment-jsdom-global: registry.npmmirror.com/jest-environment-jsdom-global/3.0.0
+  jest-environment-jsdom-global: registry.npmmirror.com/jest-environment-jsdom-global/3.0.0_jqscefd2gh2ghkrlcujxpo26jq
   jest-location-mock: registry.npmmirror.com/jest-location-mock/1.0.9
+  jest-mock-console: registry.npmmirror.com/jest-mock-console/2.0.0_jest@27.5.1
   prettier: registry.npmmirror.com/prettier/2.7.1
-  ts-jest: registry.npmmirror.com/ts-jest/27.1.4_tgc6da2oqazvrn56dzwolsqo5i
+  ts-jest: registry.npmmirror.com/ts-jest/27.1.4_pk4vsv2ithcqagckraecvsx2cu
   typescript: registry.npmmirror.com/typescript/4.6.3
 
 packages:
@@ -2002,13 +2004,16 @@ packages:
       pretty-format: registry.npmmirror.com/pretty-format/27.5.1
     dev: false
 
-  registry.npmmirror.com/jest-environment-jsdom-global/3.0.0:
+  registry.npmmirror.com/jest-environment-jsdom-global/3.0.0_jqscefd2gh2ghkrlcujxpo26jq:
     resolution: {integrity: sha512-+7ZNxuB/35ybGug9vMaBYontqI7T8KhnUU55wtT5OYw6GRfDn2Vzak2YRvBwFjdm0so0Qz7KAL6NtEB0r+3x+g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/jest-environment-jsdom-global/-/jest-environment-jsdom-global-3.0.0.tgz}
+    id: registry.npmmirror.com/jest-environment-jsdom-global/3.0.0
     name: jest-environment-jsdom-global
     version: 3.0.0
     engines: {node: '>= 12'}
     peerDependencies:
       jest-environment-jsdom: 22.x || 23.x || 24.x || 25.x || 26.x || 27.x
+    dependencies:
+      jest-environment-jsdom: registry.npmmirror.com/jest-environment-jsdom/27.5.1
     dev: false
 
   registry.npmmirror.com/jest-environment-jsdom/27.5.1:
@@ -2148,6 +2153,17 @@ packages:
       pretty-format: registry.npmmirror.com/pretty-format/27.5.1
       slash: registry.npmmirror.com/slash/3.0.0
       stack-utils: registry.npmmirror.com/stack-utils/2.0.5
+    dev: false
+
+  registry.npmmirror.com/jest-mock-console/2.0.0_jest@27.5.1:
+    resolution: {integrity: sha512-7zrKtXVut+6doalosFxw/2O9spLepQJ9VukODtyLIub2fFkWKe1TyQrxr/GyQogTQcdkHfhvFJdx1OEzLqf/mw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/jest-mock-console/-/jest-mock-console-2.0.0.tgz}
+    id: registry.npmmirror.com/jest-mock-console/2.0.0
+    name: jest-mock-console
+    version: 2.0.0
+    peerDependencies:
+      jest: '>= 22.4.2'
+    dependencies:
+      jest: registry.npmmirror.com/jest/27.5.1
     dev: false
 
   registry.npmmirror.com/jest-mock/27.5.1:
@@ -3185,7 +3201,7 @@ packages:
       punycode: registry.npmmirror.com/punycode/2.1.1
     dev: false
 
-  registry.npmmirror.com/ts-jest/27.1.4_tgc6da2oqazvrn56dzwolsqo5i:
+  registry.npmmirror.com/ts-jest/27.1.4_pk4vsv2ithcqagckraecvsx2cu:
     resolution: {integrity: sha512-qjkZlVPWVctAezwsOD1OPzbZ+k7zA5z3oxII4dGdZo5ggX/PL7kvwTM0pXTr10fAtbiVpJaL3bWd502zAhpgSQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ts-jest/-/ts-jest-27.1.4.tgz}
     id: registry.npmmirror.com/ts-jest/27.1.4
     name: ts-jest
@@ -3209,6 +3225,7 @@ packages:
       esbuild:
         optional: true
     dependencies:
+      '@babel/core': registry.npmmirror.com/@babel/core/7.19.0
       '@types/jest': registry.npmmirror.com/@types/jest/27.4.1
       bs-logger: registry.npmmirror.com/bs-logger/0.2.6
       fast-json-stable-stringify: registry.npmmirror.com/fast-json-stable-stringify/2.1.0

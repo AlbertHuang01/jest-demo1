@@ -1,5 +1,9 @@
 import "jest-location-mock";
+import mockConsole from "jest-mock-console";
 
+mockConsole();
+
+// 手动 mock localStorage
 // Object.defineProperty(global, "localStorage", {
 //   value: {
 //     store: {} as Record<string, string>,
@@ -18,3 +22,9 @@ import "jest-location-mock";
 //   },
 //   configurable: true,
 // });
+
+// 手动 mock console.xxx
+// jest.spyOn(console, "log").mockReturnValue();
+// jest.spyOn(console, "info").mockReturnValue();
+// jest.spyOn(console, "warn").mockReturnValue();
+// jest.spyOn(console, "error").mockReturnValue();
