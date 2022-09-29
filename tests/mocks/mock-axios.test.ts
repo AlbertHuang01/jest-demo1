@@ -20,3 +20,10 @@ test("should fetch data", async () => {
   const response = await axios.get("sss");
   expect(response).toEqual(resp);
 });
+
+test('mock replace method',async()=>{
+  const axiosPost= jest.spyOn(axios, "post")
+  await axios.post('/666',{id:777})
+  // 断言调用 axios post 方法的参数
+  expect(axiosPost).toBeCalledWith('/666',{id:677})
+})
